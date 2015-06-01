@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<title>Hello My name is Jim</title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<style>
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	background-color: #fff;
+}
+
+.container{
+	width: 60%;
+	margin: 20px auto;
+	overflow: auto;
+}
+
+#content-img img{
+	height: auto;
+	max-width: 350px;
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+	margin-left: 3em;
+	float: left;
+}
+
+.content-box p{
+	font-size: 18px
+}
+
+.content-box h1{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.content-box h3{
+	text-align: center;
+	margin-bottom: 28px;
+}
+
+.content-box {
+	overflow: auto;
+	text-indent: 0.5cm;
+  	letter-spacing: 0.05cm;
+  	margin-top: 2em;
+}
+
+.content-box p::selection{
+	background: #00cccc;
+	color: #fff;
+}
+
+.content-box h1::selection{
+	background: #00cccc;
+	color: #fff;
+}
+
+.content-box h3::selection{
+	background: #00cccc;
+	color: #fff;
+}
+
+#gotop {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;    
+    padding: 10px 15px;
+	font-size: 20px;
+    background: #00cccc;
+    color: white;
+    cursor: pointer;
+}
+
+#aside{
+	position: fixed;
+	right: 0px;
+	top:  250px;
+	padding: 8px;
+	background-color: #00cccc;
+	color: white;
+	border-radius: 25px
+}
+
+#aside span{
+	font-size: 17px;
+	position: relative;
+}
+
+#aside a{
+	text-decoration: none;
+}
+
+#i-facebook{
+	position: absolute;
+	top: -12px;
+	left: -1px;
+	color: white;
+	font-size: 0.8em;
+}
+
+#i-instagram{
+	position: absolute;
+	top: -12px;
+	left: 15px;
+	color: white;
+	font-size: 0.8em;
+}
+
+.circle-blue{
+	background-color: #00cccc;
+	height: 150px;
+	width: 150px;
+	line-height: 150px;
+	text-align: center;
+	color: white;
+	-webkit-border-radius: 75px;
+	-moz-border-radius: 75px;
+	border-radius: 75px;
+	float: left;
+	margin-right: 3em;
+	margin-left: 5em;
+}
+
+.circle-think{
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  width: 270px;
+  height: 150px;
+  line-height: 150px;
+  color: white;
+  background-color: #00cccc;
+  font-size: 3em;
+  -webkit-border-top-left-radius: 220px 120px;
+  -webkit-border-top-right-radius: 220px 120px;
+  -webkit-border-bottom-right-radius: 220px 120px;
+  -webkit-border-bottom-left-radius: 220px 120px;
+  -moz-border-radius: 220px / 120px;
+  border-radius: 220px / 120px;
+}
+
+.circle-think::before{
+  content: " ";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 20px;
+  bottom: -20px;
+  border-radius: 30px;
+  background-color: #00cccc;
+}
+
+.circle-think::after{
+  content: " ";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 0px;
+  bottom: -40px;
+  border-radius: 15px;
+  background-color: #00cccc;
+}
+
+
+hr{
+	width: 99%;
+	color: #00cccc;
+  	border: double;
+}
+
+img{
+	border-radius: 50%;
+	height: auto;
+  	max-width: 100%;
+  	float: left;
+  	margin-right: 5em;
+  	margin-bottom: 0.5em;
+}
+
+i{
+	color: #336699;
+	margin-right: 0.2em;
+}
+
+header{
+	text-align: center;
+}
+
+header h1{
+	font-family: bold;
+	font-size: 5em;
+	color: #606060;
+}
+
+header p{
+	font-family: bold;
+	font-size: 3em;
+	color: #606060;
+}
+
+
+nav{
+	text-align: center;
+}
+
+* ,*:after,*:before{
+	transition: all 0.5s ease;
+}
+
+button {
+	border: solid 2px white;
+  	background: #606060;
+  	color: white;
+  	width: 20%;
+  	line-height: 50px;
+	display: inline-block;
+	margin: 0 1% 1%;
+	font-size: 20px;
+	position: relative;
+	cursor: pointer;
+	z-index: 50;
+}
+
+button:after {
+  content: "";
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+  position: absolute;
+  background: white;
+  left: 0;
+}
+
+button:hover{
+	color: #0e83cd;
+}
+
+.btn1::after{
+	background: #606060;
+}
+
+.btn1:hover::after{
+	background: white;
+}
+
+.btn2::after{
+	margin-left: 50%; width: 0;
+}
+
+.btn2:hover::after{
+	margin-left: 5%; width: 90%;
+}
+
+.btn3::after{
+	margin-top: 25px; height: 0;
+}
+
+.btn3:hover::after{
+	margin-top: 5px; height: 40px;
+}
+
+.btn4{
+	overflow: hidden;
+}
+
+.btn4::after{
+	transform: skew(50deg);
+	margin-left: 50%; 
+	width: 0%;
+}
+
+.btn4:hover::after{
+	margin-left: 5%;
+	width: 90%;
+}
+section{
+	width: 95%;
+	overflow: auto;
+}
+
+footer{
+	display: none;
+	width: 100%;
+	background-color: #00cccc;
+  	text-align: center;
+  	color: white;
+  	padding: 90px 0;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+footer i{
+	margin: 0 0.2em 0 0.8em;
+	color: #336699;
+}
+
+footer br{
+	display: none;
+}
+
+footer span{
+	font-weight: bold;
+	font-size: 20px;
+	position: relative;
+}
+
+footer #i-facebook{
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	color: white;
+}
+
+footer #i-instagram{
+	position: absolute;
+	top: -15px;
+	left: 8px;
+	color: white;
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px){
+	.container{
+    	width: 100%;
+		margin: 20px auto;
+		overflow: auto;
+	}
+
+    #aside{
+    	display: none;
+    }
+
+	footer{
+		display: inline-block;
+		text-align: center;
+		padding: 50px 0;
+		position: relative;
+	}
+
+	footer span{
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	footer i{
+		margin: 0 0.1em 0 0.3em;
+	}
+
+	footer #i-facebook{
+		position: absolute;
+		top: -13px;
+		left: -5px;
+		color: white;
+	}
+
+	footer #i-instagram{
+		position: absolute;
+		top: -13px;
+		left: 10px;
+		color: white;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.container{
+		width: 100%;
+		margin: 20px auto;
+		overflow: auto;
+	} 
+
+	#aside{
+		display: none;
+	}
+
+	.content-box{
+		width: 100%;
+	}
+
+	.content-box h1{
+		text-align: center;
+	}
+
+	.circle-think{
+		float: right;
+		line-height: 50px;
+	}
+
+	#content-img img{
+		float: none;
+	}
+
+	header h1{
+		font-size: 4em;
+	}
+
+	nav ul li{
+     	display: block;
+    }
+
+
+	img{
+		float: none;
+		margin: 20px auto;
+	}
+
+	section{
+		text-align: center;
+	}
+
+	footer{
+		display: inline-block;
+		text-align: left;
+		padding: 50px 0;
+		position: relative;
+	}
+
+	footer span{
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	footer i{
+		margin: 0 0.1em 0 0.3em;
+	}
+
+	footer br{
+		display: inline-block;
+	}
+
+	footer #i-facebook{
+		position: absolute;
+		top: -13px;
+		left: -5px;
+		color: white;
+	}
+
+	footer #i-instagram{
+		position: absolute;
+		top: -13px;
+		left: 10px;
+		color: white;
+	}   	
+}
+
+@media screen and (max-width: 480px){
+	.container{
+     	width: 100%;
+     	margin: 20px 0;
+     	overflow: auto;
+    }
+
+     header h1{
+     	font-family: bold;
+     	font-size: 2.5em;
+     	color: #606060;
+    }
+
+     header p{
+     	font-family: bold;
+     	font-size: 1.5em;
+     	color: #606060;
+    }
+
+    .content-box h3{
+		text-align: center;
+		margin-bottom: 28px;
+		font-size: 1em;
+	}
+
+
+     #content-img img{
+		float: none;
+		max-width: 100%;
+		margin: 0 0 0 1px;
+	}
+
+	img{
+		float: none;
+		margin: 20px auto;
+	}
+
+	section{
+		text-align: center;
+	}
+
+	.content-box h1{
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	button{
+		display: block;
+		margin-left: 0;
+		width: 100%;
+	}
+
+	nav a{
+		text-decoration: none;
+	}
+
+	.circle-think{
+  		position: relative;
+  		margin: 5px auto;
+  		text-align: center;
+  		width: 270px;
+  		height: 150px;
+  		line-height: 50px;
+  		color: #00cccc;
+  		background-color: #fff;
+  		font-size: 3em;
+  		-webkit-border-top-left-radius: 220px 120px;
+  		-webkit-border-top-right-radius: 220px 120px;
+  		-webkit-border-bottom-right-radius: 220px 120px;
+  		-webkit-border-bottom-left-radius: 220px 120px;
+  		-moz-border-radius: 220px / 120px;
+  		border-radius: 220px / 120px;
+  		border: solid 5px #00cccc;
+	}
+
+	.circle-think::before{
+  		content: " ";
+  		position: absolute;
+  		width: 30px;
+  		height: 30px;
+  		left: 150px;
+  		bottom: -20px;
+  		border-radius: 30px;
+  		background-color: #fff;
+  		border: solid 5px #00cccc;
+	}
+
+	.circle-think::after{
+  		content: " ";
+  		position: absolute;
+  		width: 15px;
+  		height: 15px;
+  		left: 140px;
+  		bottom: -45px;
+  		border-radius: 15px;
+  		background-color: #fff;
+  		border: solid 5px #00cccc;
+	}
+}
+
+@media screen and (min-width: 980px) and (max-width: 1199px){
+	.container{
+		width: 100%;
+		margin: 20px auto;
+		overflow: auto;
+	}
+
+	#aside{
+		display: none;
+	}
+
+	footer{
+		display: inline-block;
+	}
+
+	footer span{
+		font-family: bold;
+		font-size: 15px;
+	}
+
+	footer #i-facebook{
+		position: absolute;
+		top: -12px;
+		left: -10px;
+		color: white;
+	}
+
+	footer #i-instagram{
+		position: absolute;
+		top: -12px;
+		left: 10px;
+		color: white;
+	}		
+}
+
+</style>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Hello, I am Jim</h1>
+				<p>This is my frist Website</p>
+		</header>
+		
+		<nav>		
+			<a href="index.html"><button class="btn1">首頁</button></a>
+				<a href="resume.html"><button class="btn2">履歷</button></a>
+					<a href="personal.html"><button class="btn3">基本資料</button></a>
+			<a href="connect.html"><button class="btn4">與我聯絡</button></a>
+		</nav>
+<hr />
+		<section>
+		
+			<img src="http://graph.facebook.com/ImJimYeh/picture?width=255&height=255">
+				<div class="content-box">
+				        <h3>姓名 - 葉儒敬</h3>
+                		<h3>城市 - 台南</h3>
+                		<h3>生日 - 1989/12/20</h3>
+                		<h3>學歷 - 高苑科技大學 電子系 - 航空電子組</h3>
+                		<h3>興趣 - 跑步、爬山、閱讀、電影、旅行</h3>
+                		<h3>技能 - 目前正在學習HTML5、CSS3、Javascript</h3>
+				</div>
+		
+		</section>
+<hr />		
+<hr />
+		<section id="content-img">
+		
+			<div class="circle-think">
+				<p>誰是葉儒敬?</p>
+			</div>
+		<img src="http://i.imgur.com/k8W95Yb.jpg"  alt="jim.jpg">	
+		<div class="content-box">
+			<h1>自我介紹</h1>
+			<p>你好，我叫葉儒敬，是個來自台南市，但夢想著到北部成為前端工程師的大男孩，我熱愛運動，籃球、跑步、爬山是我最常跟朋友一起做的事情，我最喜歡的球員是<q>Kobe Bryant</q>，因為他那就算面對再多的挫折跟批評還是勇往直前的精神深深的感動了我。</p>
+			<p>除了運動以外我也熱愛閱讀，我什麼類型的書都看，但最喜歡的是推理小說，我喜歡動腦思考也喜歡從不一樣的角度看事情，或許是從小受到父母親的影響，我的個性樂觀、開朗、喜歡嘗試新的事物，更對人生保持熱情，我認為任何一件發生在自己身上的小事都有努力的價值，我很開心有這個機會可以投履歷給貴公司，希望你們會喜歡，謝謝!!</p>
+		</div>	
+		
+		</section>
+<hr />
+		<aside id="aside">
+			<i class="fa fa-phone-square fa-3x"></i><span>Call T: 09-23-332-817</span> <br/>
+
+			<i class="fa fa-envelope-square fa-3x"></i><span>Contact: yamap52088@gmail.com</span> <br/>
+
+			<i class="fa fa-plus-square fa-3x"></i><span>Follow me
+
+			<a href="https://www.facebook.com/ImJimYeh">
+
+  				<i class="fa fa-facebook-square" id="i-facebook"></i>
+
+			</a>
+
+			<a href="https://instagram.com/hannzawa/">
+
+  				<i class="fa fa-instagram" id="i-instagram"></i>
+
+			</a>
+
+			</span>  <br/>
+
+      		<i class="fa fa-copyright fa-3x"></i><span>&copy 2015 by Jim Yeh.</span> <br/>
+
+      	</aside>
+	</div>
+
+		<footer>
+
+			<i class="fa fa-phone-square fa-3x"></i><span>Call T: 09-23-332-817</span> <br/>
+
+			<i class="fa fa-envelope-square fa-3x"></i><span>Contact: yamap52088@gmail.com</span> <br/>
+
+			<i class="fa fa-plus-square fa-3x"></i><span>Follow me
+
+			<a href="https://www.facebook.com/ImJimYeh">
+
+  				<i class="fa fa-facebook-square" id="i-facebook"></i>
+
+			</a>
+
+			<a href="https://instagram.com/hannzawa/">
+
+  				<i class="fa fa-instagram" id="i-instagram"></i>
+
+			</a>
+
+			</span>  <br/>
+
+      		<i class="fa fa-copyright fa-3x"></i><span>&copy 2015 by Jim Yeh.</span> <br/>
+		
+		</footer>
+
+		<div id="gotop">Go top</div>
+
+		
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function(){
+    $("#gotop").click(function(){
+        jQuery("html,body").animate({
+            scrollTop:0
+        },1000);
+    });
+    $(window).scroll(function() {
+        if ( $(this).scrollTop() > 300){
+            $('#gotop').fadeIn("fast");
+        } else {
+            $('#gotop').stop().fadeOut("fast");
+        }
+    });
+});
+</script>				
+</body>		
