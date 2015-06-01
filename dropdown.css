@@ -1,0 +1,68 @@
+nav{
+  margin: 0px auto;
+  text-align: center;
+}
+
+.menu > li{
+  position: relative;
+  display: inline-block;
+  margin-left: -5px;
+  padding: 20px;
+  background-color: #E62E5C;
+  font-size: 30px;
+ }
+
+.menu .home{
+  background-color: #00B8B8;
+}
+
+.menu .youtube{
+  background-color: #CCCC00;
+}
+
+.menu .about{
+  background-color: #009933;
+}
+
+.submenu{
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  display: none;
+  background-color: yellow;
+}
+
+.submenu li{
+  padding: 10px;
+}
+
+.menu a{
+  display: inline-block;
+}
+
+.submenu a{
+  display: block;
+}
+
+.menu li:hover .submenu{
+  display: block;
+  z-index: -1;
+}
+
+.home{
+  color: blue;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.submenu a{
+  background-color: yellow;
+  color: #606060;
+}
+
+li{
+  list-style: none;
+}
