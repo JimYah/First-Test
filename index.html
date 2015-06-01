@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+<title>Hello My name is Jim</title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<style>
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 0.9em;
+	line-height: 1.5em;
+	background-color: #fff;
+}
+
+.container{
+	width: 100%;
+	margin: 20px auto;
+	overflow: auto;
+}
+
+header{
+	text-align: center;
+}
+
+header h1{
+	font-family: bold;
+	font-size: 5em;
+	color: #606060;
+}
+
+header p{
+	font-family: bold;
+	font-size: 3em;
+	color: #606060;
+}
+
+nav{
+	text-align: center;
+}
+
+* ,*:after,*:before{
+	transition: all 0.5s ease;
+}
+
+button {
+	border: solid 2px white;
+  	background: #606060;
+  	color: white;
+  	width: 12%;
+  	line-height: 50px;
+	display: inline-block;
+	margin: 0 0.6% 0.6%;
+	font-size: 20px;
+	position: relative;
+	cursor: pointer;
+	z-index: 50;
+}
+
+button:after {
+  content: "";
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+  position: absolute;
+  background: white;
+  left: 0;
+}
+
+button:hover{
+	color: #0e83cd;
+}
+
+.btn1::after{
+	background: #606060;
+}
+
+.btn1:hover::after{
+	background: white;
+}
+
+.btn2::after{
+	margin-left: 50%; width: 0;
+}
+
+.btn2:hover::after{
+	margin-left: 5%; width: 90%;
+}
+
+.btn3::after{
+	margin-top: 25px; height: 0;
+}
+
+.btn3:hover::after{
+	margin-top: 5px; height: 40px;
+}
+
+.btn4{
+	overflow: hidden;
+}
+
+.btn4::after{
+	transform: skew(50deg);
+	margin-left: 50%; 
+	width: 0%;
+}
+
+.btn4:hover::after{
+	margin-left: 5%;
+	width: 90%;
+}
+
+img{
+	border-radius: 50%;
+	height: auto;
+  	max-width: 100%;
+  	float: right;
+}
+
+section h1,h3{
+	font-size: 4em;
+	color: #606060;
+	font-family: monospace;
+	text-align: left;
+}
+
+section{
+	width: 48%;
+	float: left;
+	overflow: auto;
+	position: relative;
+	margin: 20px 10px;
+	text-align: center;
+}	
+
+
+footer{
+	width: 100%;
+	background-color: rgba(232, 53, 86, 1);
+  	text-align: center;
+  	color: white;
+  	padding: 90px 0;
+}
+
+footer a{
+	text-decoration: none;
+}
+
+span{
+	font-weight: bold;
+	font-size: 20px;
+	position: relative;
+}
+
+i{
+	margin: 0 0.2em 0 0.8em;
+	color: #00cccc;
+}
+
+br{
+	display: none;
+}
+
+#i-facebook{
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	color: white;
+}
+
+#i-instagram{
+	position: absolute;
+	top: -15px;
+	left: 8px;
+	color: white;
+}
+
+.circle-pink{
+	font-size: 20px;
+	background-color: #E62E5C;
+	height: 150px;
+	width: 150px;
+	line-height: 150px;
+	text-align: center;
+	color: white;
+	-webkit-border-radius: 75px;
+	-moz-border-radius: 75px;
+	border-radius: 75px;
+	float: left;
+	position: relative;
+	margin-right: 0.5em;
+	margin-bottom: 11em;
+	box-shadow: 0 10px #B8254A;
+	top: -6px;
+	transition: all .2s ease;
+}
+
+.circle-pink:hover{
+	box-shadow: 0 5px #B8254A;
+	position: relative;
+	top: -3px;
+}
+
+.circle-pink:active{
+	box-shadow: 0 1px #B8254A;
+	position: relative;
+	top: -1px;
+}
+
+.circle-blue{
+	font-size: 20px;
+	background-color: #00B8B8;
+	height: 150px;
+	width: 150px;
+	line-height: 150px;
+	text-align: center;
+	color: white;
+	-webkit-border-radius: 75px;
+	-moz-border-radius: 75px;
+	border-radius: 75px;
+	float: left;
+	position: relative;
+	margin-right: 0.5em;
+	box-shadow: 0 10px #006699;
+	top: -6px;
+	transition: all .2s ease;
+}
+
+.circle-blue:hover{
+	box-shadow: 0 5px #006699;
+	position: relative;
+	top: -3px;
+}
+
+.circle-blue:active{
+	box-shadow: 0 1px #006699;
+	position: relative;
+	top: -1px;
+}
+
+.circle-green{
+	font-size: 20px;
+	background-color: #CCCC00;
+	height: 150px;
+	width: 150px;
+	line-height: 150px;
+	text-align: center;
+	color: white;
+	-webkit-border-radius: 75px;
+	-moz-border-radius: 75px;
+	border-radius: 75px;
+	float: left;
+	position: relative;
+	box-shadow: 0 10px #999900;
+	top: -6px;
+	transition: all .2s ease;
+}
+
+.circle-green:hover{
+	box-shadow: 0 5px #999900;
+	position: relative;
+	top: -3px;
+}
+
+.circle-green:active{
+	box-shadow: 0 1px #999900;
+	position: relative;
+	top: -1px;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+	.container{
+		width: 100%;
+		margin: 20px auto;
+		overflow: auto;
+	}
+
+	header{
+		text-align: center;
+	}
+
+	header h1{
+		font-family: bold;
+		font-size: 5em;
+		color: #606060;
+	}
+
+	header p{
+		font-family: bold;
+		font-size: 3em;
+		color: #606060;
+	}
+
+	section{
+		width: 99%;
+	}
+
+	section img{
+		margin: 20px auto;
+	}
+
+	section h1,h3{
+		text-align: center;
+	}
+
+	section a{
+		text-decoration: none;
+	}
+
+	img{
+		float: none;
+	}
+
+	button{
+		width: 20%;
+	}
+
+	.circle-green{
+		float: none;
+		margin: 0 auto;
+	}
+
+	.circle-blue{
+		float: right;
+	}
+
+
+	footer{
+		text-align: center;
+		padding: 50px 0;
+		position: relative;
+	}
+
+	span{
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	i{
+		margin: 0 0.1em 0 0.3em;
+	}
+
+	#i-facebook{
+		position: absolute;
+		top: -13px;
+		left: -5px;
+		color: white;
+	}
+
+	#i-instagram{
+		position: absolute;
+		top: -13px;
+		left: 10px;
+		color: white;
+	}	
+
+}
+
+@media screen and (max-width: 767px) {
+	.container{
+		width: 100%;
+		margin: 20px auto;
+		overflow: auto;
+	}
+
+	header h1,p{
+		text-align: center;
+	}
+
+	section{
+		width: 99%;
+	}
+
+	section h1,h3{
+		text-align: center;
+	}
+
+	section a{
+		text-decoration: none;
+	}
+
+	img{
+		float: none;
+	}
+
+	.circle-green{
+		float: none;
+		margin: 0 auto;
+	}
+
+	.circle-blue{
+		float: right;
+	}
+
+	br{
+		display: inline-block;
+	}
+
+	footer{
+		text-align: left;
+	}
+
+	button{
+		width: 20%;
+		margin: 0 1% 1%;
+	}
+
+	#i-facebook{
+		position: absolute;
+		top: -15px;
+		left: -15px;
+		color: white;
+	}
+
+	#i-instagram{
+		position: absolute;
+		top: -15px;
+		left: 8px;
+		color: white;
+	}
+}
+
+@media screen and (max-width: 480px) {
+     .container{
+     	width: 100%;
+     	margin: 20px 0;
+     	overflow: auto;
+     }
+
+     header h1{
+     	font-family: bold;
+     	font-size: 3em;
+     	color: #606060;
+     }
+
+     header p{
+     	font-family: bold;
+     	font-size: 2em;
+     	color: #606060;
+    }
+
+	 button{
+		display: block;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	 section{
+     	width: 98%;
+     	text-align: center;
+     }
+
+     section img{
+     	margin-left: 0;
+     }
+
+     section h1,h3{
+     	font-size: 2.5em;
+     	margin-left: 0;
+     }
+
+	 nav a{
+     	text-decoration: none;
+     }
+
+     .circle-pink,.circle-blue,.circle-green{
+     	float: none;
+     	margin: 20px auto;
+     }
+
+	i{
+     	margin: 0.1em 0.2em 0 0;
+     }
+
+    span{
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+	#i-facebook{
+		position: absolute;
+		top: -15px;
+		left: 1px;
+		color: white;
+	}
+
+	#i-instagram{
+		position: absolute;
+		top: -15px;
+		left: 22px;
+		color: white;
+	}
+}
+
+@media screen and (min-width: 980px) and (max-width: 1199px){
+	.container{
+		width: 100%;
+		margin: 20px auto;
+		overflow: auto;
+	}
+
+	section{
+		position: relative;
+		width: 99%;
+	}
+
+	section h1,h3{
+		text-align: center;
+	}
+
+	section a{
+		text-decoration: none;
+	}
+
+	img{
+		float: none;
+	}
+
+	button{
+		width: 20%;
+		margin: 0 1% 1%;
+	}
+
+	.circle-green{
+		float: none;
+		margin: 0 auto;
+	}
+
+	.circle-blue{
+		float: right;
+	}
+
+	span{
+		font-family: bold;
+		font-size: 15px;
+	}
+}
+
+</style>
+
+
+
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Hello, I am Jim</h1>
+				<p>This is my frist Website</p>
+
+		</header>
+		<nav>		
+			<a href="index.html"><button class="btn1">首頁</button></a>
+				<a href="resume.html"><button class="btn2">履歷</button></a>
+					<a href="personal.html"><button class="btn3">基本資料</button></a>
+			<a href="connect.html"><button class="btn4">與我聯絡</button></a>
+		</nav>
+
+		<section>
+			<img src="http://graph.facebook.com/ImJimYeh/picture?width=325&height=325">
+		</section>
+
+		<section>
+			<h1>Hello,</h1>
+				<h3>a bit about me</h3>
+		<a href="resume.html">		
+			<div class="circle-pink">履歷</div>
+		</a>
+
+		<a href="personal.html">
+			<div class="circle-blue">基本資料</div>
+		</a>
+
+		<a href="connect.html">
+			<div class="circle-green">與我聯絡</div>
+		</a>	
+		</section>
+</div>				
+
+		<footer>
+
+			<i class="fa fa-phone-square fa-3x"></i><span>Call T: 09-23-332-817</span> <br/>
+
+			<i class="fa fa-envelope-square fa-3x"></i><span>Contact: yamap52088@gmail.com</span> <br/>
+
+			<i class="fa fa-plus-square fa-3x"></i><span>Follow me
+
+			<a href="https://www.facebook.com/ImJimYeh">
+
+  				<i class="fa fa-facebook-square" id="i-facebook"></i>
+
+			</a>
+
+			<a href="https://instagram.com/hannzawa/">
+
+  				<i class="fa fa-instagram" id="i-instagram"></i>
+
+			</a>
+
+			</span>  <br/>
+
+      		<i class="fa fa-copyright fa-3x"></i><span>&copy 2015 by Jim Yeh.</span> <br/>
+
+
+
+
+
+		</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
